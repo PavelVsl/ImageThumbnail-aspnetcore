@@ -46,7 +46,7 @@ Pass size parameter as query string in image urls.
    <div class="item">
             <img src="~/Gallery/1.jpg?size=256x256" />
             <img src="~/Gallery/2.jpg?size=512" />
-			<img src="~/Gallery/3.jpg?size=full" /> <!-- Original image -->
+	    <img src="~/Gallery/3.jpg?size=full" /> <!-- Original image -->
             <img src="~/Gallery/4.jpg" /> <!-- Default size -->
    </div>
 ...
