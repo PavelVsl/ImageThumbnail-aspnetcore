@@ -53,7 +53,7 @@ Pass size parameter as query string in image urls.
 ```
 ## Demo
 
-Image & Gif animation
+![alt text](https://raw.githubusercontent.com/osprakash/Imagethumbnail-aspnetcore/blob/master/screenshots/demo2.gif)
 
 ## Options
 
