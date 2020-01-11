@@ -55,6 +55,8 @@ Pass size parameter as query string in image urls.
 
 ![alt text](screenshots/demo2.gif)
 
+![alt text](screenshots/demo1.gif)
+
 ## Options
 
 The `ImageThumbnailOptions` are pretty simple.
