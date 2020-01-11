@@ -39,7 +39,7 @@ public class Startup
 ```
 
 
-### _Sample.cshtml (for ASP.NET Core MVC)
+### _Sample.cshtml (ASP.NET Core Web app)
 Pass size parameter as query string in image urls. 
 ```html
 ...
