@@ -26,18 +26,18 @@ Open your `Startup.cs` and configure the middleware in the `Configure` method.
 using ImageThumbnail.AspNetCore.Middleware;
 
 public class Startup
-    {
-        public void Configure(IApplicationBuilder app)
-        {
-            app.UseStaticFiles();
-    		
-    		ImageThumbnailOptions options = new ImageThumbnailOptions("Gallery", "Thumbnails");
-    		options.ImageQuality = 75L;
-    		app.UseImageThumbnail(options);
-    
-            app.UseMvc();
-        }
-    }
+{
+      public void Configure(IApplicationBuilder app)
+      {
+        app.UseStaticFiles();
+  		
+ 	ImageThumbnailOptions options = new ImageThumbnailOptions("Gallery", "Thumbnails");
+    	options.ImageQuality = 75L;
+    	app.UseImageThumbnail(options);
+     
+     	app.UseMvc();
+      }
+}
 ```
 
 
