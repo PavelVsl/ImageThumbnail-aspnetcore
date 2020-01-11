@@ -1,0 +1,66 @@
+﻿@page
+@model GalleryApp.Pages.PhotosModel
+@{
+    ViewData["Title"] = "Photos";
+}
+
+<h2>Photos</h2>
+
+<table cellpadding="4" cellspacing="4">
+    <tr>
+        <td>
+            <label>Size :</label>
+        </td>
+        <td class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" data-size="128">128x128</button>
+            <button type="button" class="btn btn-secondary" data-size="256">256x256</button>
+            <button type="button" class="btn btn-secondary" data-size="512">512x512</button>
+        </td>
+        <td>
+            <label>Custom :</label>
+            <input type="number" />
+        </td>
+    </tr>
+</table>
+
+<div class="gallery">
+    @foreach (var item in Model.FileNames)
+    {
+        <div class="item">
+            <img src="~/Gallery/@item" />
+        </div>
+    }
+</div>
+@section Scripts {
+    <script>
+        $(function () {
+            $("button").click(function () {
+                var size = $(this).data("size");
+                reloadImages(size);
+            });
+
+            $("input").keypress(function (e) {
+                if (e.keyCode == 13) {
+                    var size = $(this).val();
+                    reloadImages(size);
+                }
+              
+            })
+        });
+
+        function reloadImages(size) {
+            
+            $("img").each(function (i, v) {
+                var src = $(v).attr("src");
+                src = getPathFromUrl(src);
+                src += "?size=" + size + "&r=" + Math.random();
+                $(v).attr("src", src);
+            });
+        }
+        function getPathFromUrl(url) {
+            return url.split("?")[0];
+        }
+    </script>
+}
+
+<div style="clear:both"></div>
