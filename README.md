@@ -23,6 +23,8 @@ Open your `Startup.cs` and configure the middleware in the `Configure` method.
 ### Startup.cs
 
 ```csharp
+using ImageThumbnail.AspNetCore.Middleware;
+
 public class Startup
     {
         public void Configure(IApplicationBuilder app)
